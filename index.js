@@ -4,8 +4,9 @@ const app = express()
 const cors = require('cors')
 app.use(cors())
 
-app.use(express.static('dist'))
+const path = require('path')
 
+app.use(express.static(path.join(__dirname, 'dist')))
 let notes = [
   {
     id: '1',
